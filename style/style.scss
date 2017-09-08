@@ -1,7 +1,11 @@
+$red: #e60000;
 html, body, div, img{
   margin: 0;
   padding: 0;
   border: 0;
+}
+body{
+  font-family: sans-serif;
 }
 .headerContainer{
   overflow: hidden;
@@ -14,6 +18,8 @@ html, body, div, img{
   height: 110px;
   margin: 0 auto;
   z-index: 1;
+  transition: 0.6s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   .header{
     width: 980px;
     height: 100%;
@@ -21,28 +27,37 @@ html, body, div, img{
     margin: 0 auto;
     .logo{
       width: 100px;
-      font-size: 40px;
+      font-size: 45px;
       padding-left: 30px;
-      color: red;
+      color: $red;
       float: left;
+      transition: 0.6s ease;
     }
     .nav{
-      margin: 0;
+      margin: 0 auto;
       float: right;
       top: 0;
       .nav_item {
         display: inline-block;
         text-align: center;
-        color: grey;
-        font-weight: bold;
         padding-top: 45px;
-        margin: auto;
-        width: 85px;
+        width: inherit;
+        margin-right: 10px;
         font-size: 12px;
-        border-top: 2px solid white;
+        border-top: 4px solid white;
+        transition: 0.6s ease;
         cursor: pointer;
         &:hover{
-          border-top: 2px solid red;
+          border-top: 4px solid $red;
+          a{
+            color: #181818;
+          }
+        }
+        a{
+          text-decoration: none;
+          color: #C0C0C0;
+          font-weight: bold;
+          transition: 0.6s ease;
         }
       }
       .social{
@@ -68,7 +83,7 @@ html, body, div, img{
       display: block;
       width: 100%;
       position: relative;
-      border-bottom: 5px solid red;
+      border-bottom: 5px solid $red;
     }
     .caption{
       position: absolute;
@@ -89,7 +104,7 @@ html, body, div, img{
         color: grey;
       }
       .info{
-        background-color: red;
+        background-color: $red;
         color: white;
         font-size: 15px;
         border-radius: 5px;
@@ -164,7 +179,7 @@ html, body, div, img{
     .boxInfo{
       float: right;
       margin: 0 auto;
-      background-color: red;
+      background-color: $red;
       color: white;
       font-size: 15px;
       border-radius: 5px;
