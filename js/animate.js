@@ -1,7 +1,7 @@
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 100) {
         $('.headerContainer').css('height','80px');
-        $('.logo').css('font-size','35px');
+        $('.logo').css('font-size','38px');
         $('.nav_item').css('padding-top','35px');
         $('.social').css('padding-top','35px');
       }
