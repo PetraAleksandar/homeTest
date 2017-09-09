@@ -123,10 +123,10 @@ body{
   }
   .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   }
   @keyframes fade {
-  from {opacity: .9}
+  from {opacity: 0.5}
   to {opacity: 1}
   }
   .prev, .next{
@@ -185,6 +185,7 @@ body{
     }
   }
   .sliderBox{
+    display: none;
     position: absolute;
     margin: 0 auto;
     border-radius: 5px;
@@ -195,7 +196,6 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: inline-flex;
     .boxText{
       text-align: left;
       margin-left: 25px;
@@ -222,6 +222,14 @@ body{
       width: 200px;
       cursor: pointer;
     }
+  }
+  .move{
+    animation-name: moveBox;
+    animation-duration: 2s;
+  }
+  @keyframes moveBox{
+    from {left: -100%;}
+    to {left: 50%;}
   }
 }
 .contentContainer{
@@ -335,7 +343,7 @@ body{
       top: 50%;
       left: 48%;
       transform: translate(-50%,-50%);
-      transition: background-color $trans;
+      transition: $trans;
       margin:50px 0 50px 3px;
   }
   .active{
@@ -388,6 +396,7 @@ body{
       a{
         text-decoration: none;
         color: grey;
+        transition: $trans;
         &:hover{
           color: $red;
         }
