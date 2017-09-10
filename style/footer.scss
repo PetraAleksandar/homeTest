@@ -1,0 +1,85 @@
+.footerContainer{
+  .footer{
+    width: $contWidth;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    .footerLogo, .contact, .news, .map{
+      width: 100%;
+      margin-left: 15px;
+      h2{
+        color: #303030;
+      }
+    }
+    .contact, .news, .map{
+      margin-left: 15px;
+    }
+    .footerLogo{
+      .flogo{
+        font-size: 40px;
+        color: $red;
+        margin: 20px 0 20px 0;
+      }
+      p{
+        color: grey;
+        margin: auto;
+      }
+    }
+    .contact{
+      .boldContact{
+        font-weight: bold;
+        color: #505050;
+      }
+      span{
+        color: grey;
+      }
+    }
+    .news{
+      p, hr{
+        color: grey;
+      }
+    }
+    .map{
+      a{
+        text-decoration: none;
+        color: grey;
+        transition: $trans;
+        &:hover{
+          color: $red;
+        }
+      }
+    }
+  }
+  @media (max-width: 425px){
+    .footer{
+      display: inline-block;
+      width: inherit;
+      .news{
+        hr{
+          margin: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) and (min-width: 426px){
+    .footer{
+      display: block;
+      width: 768px;
+      .footerLogo, .contact, .news, .map{
+        width: 250px;
+        position: absolute;
+      }
+      .footerLogo, .news{
+        float: left;
+        padding-left: 30px;
+        margin: 0 auto;
+      }
+      .contact, .map{
+        margin-left: 450px;
+      }
+      .news, .map{
+        margin-top: 150px;
+      }
+    }
+  }
+}

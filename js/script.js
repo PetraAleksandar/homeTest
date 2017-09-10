@@ -25,6 +25,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   box[slideIndex - 1].style.display = "inline-flex";
   dots[slideIndex-1].className += " active";
+  if(window.innerWidth < 769){
+    for (i = 0; i < box.length; i++) {
+      box[i].style.display = 'none';
+    }
+  }
 }
 function currSlide(n) {
   clearTimeout(timer);
