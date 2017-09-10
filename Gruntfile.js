@@ -10,9 +10,9 @@ module.exports = function (grunt) {
     sass: {
       options: {
         style: 'compressed'
-      },                              // Task
-      dist: {                            // Target
-        files: {                         // Dictionary of files
+      },                             
+      dist: {
+        files: {
           'build/main.css': 'style/style.scss'
         }
       }
