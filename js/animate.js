@@ -17,7 +17,7 @@ $(window).scroll(function() {
     }
   }
   else{
-    if ($(this).scrollTop() >= 350) {
+    if ($(this).scrollTop() >= 400) {
       $('#navbar').removeClass("navActive");
     }
   }
