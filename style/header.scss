@@ -83,7 +83,7 @@
   @media (max-width: 768px){
     padding: 0;
     position: static;
-    height: auto;
+    height: inherit;
     .header{
       position: static;
       .menuIcon{
@@ -110,7 +110,11 @@
           font-size: 10px;
           font-weight: 300;
           letter-spacing: 2px;
-          z-index: 10;
+          &:hover{
+            a{
+              color: $red;
+            }
+          }
         }
         .social{
           display: none;
